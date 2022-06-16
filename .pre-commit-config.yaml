@@ -1,0 +1,51 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.3.0
+    hooks:
+      - id: check-yaml
+        args: [--allow-multiple-documents]
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+  - repo: local
+    hooks:
+      - id: isort
+        name: isort
+        entry: poetry run isort src tests
+        language: system
+        types: [python]
+        pass_filenames: false
+      - id: black
+        name: black
+        entry: poetry run black src tests
+        language: system
+        types: [python]
+        pass_filenames: false
+      - id: docformatter
+        name: docformatter
+        entry: poetry run docformatter -r -i --pre-summary-newline --make-summary-multi-line --wrap-summaries 90 --wrap-descriptions 90 src tests
+        language: system
+        types: [python]
+        pass_filenames: false
+      - id: flake8
+        name: flake8
+        entry: poetry run flake8 src tests
+        language: system
+        types: [python]
+        pass_filenames: false
+      - id: pytest
+        name: pytest
+        entry: poetry run pytest --cov=src tests
+        language: system
+        types: [python]
+        pass_filenames: false
+      - id: bandit
+        name: bandit
+        entry: poetry run bandit -r src
+        language: system
+        types: [python]
+        pass_filenames: false
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v2.7.1
+    hooks:
+      - id: prettier
+        exclude: ^poetry.lock
