@@ -1,5 +1,5 @@
 ci:
-  skip: [local]
+  skip: [pytest]
 
 repos:
   # general checks (see here: https://pre-commit.com/hooks.html)
