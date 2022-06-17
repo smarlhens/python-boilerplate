@@ -6,6 +6,10 @@ authors = ["Samuel MARLHENS <samuel.marlhens@gmail.com>"]
 packages = [
     { include = "*", from = "src"}
 ]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/smarlhens/python-boilerplate#readme"
+repository = "https://github.com/smarlhens/python-boilerplate"
 
 [tool.poetry.scripts]
 myapplication = "myapplication.main:main"
@@ -14,18 +18,13 @@ myapplication = "myapplication.main:main"
 python = "3.10.4"
 
 [tool.poetry.dev-dependencies]
-isort = "5.10.1"
-black = "22.3.0"
-flake8 = "4.0.1"
-mypy = "0.961"
 pytest = "7.1.2"
 pytest-cov = "3.0.0"
-bandit = "1.7.4"
-docformatter = "1.4"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+backend-path = ["src"]
 
 [tool.pytest.ini_options]
 addopts = "-vvv"

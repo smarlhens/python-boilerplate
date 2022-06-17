@@ -1,4 +1,8 @@
+ci:
+  skip: [local]
+
 repos:
+  # general checks (see here: https://pre-commit.com/hooks.html)
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.3.0
     hooks:
@@ -6,44 +10,79 @@ repos:
         args: [--allow-multiple-documents]
       - id: end-of-file-fixer
       - id: trailing-whitespace
-  - repo: local
+
+  # black - formatting
+  - repo: https://github.com/psf/black
+    rev: 22.3.0
+    hooks:
+      - id: black
+        name: black
+        args:
+          - "--config"
+          - "./pyproject.toml"
+
+  # isort - sorting imports
+  - repo: https://github.com/pycqa/isort
+    rev: 5.10.1
     hooks:
       - id: isort
         name: isort
-        entry: poetry run isort src tests
-        language: system
-        types: [python]
-        pass_filenames: false
-      - id: black
-        name: black
-        entry: poetry run black src tests
-        language: system
-        types: [python]
-        pass_filenames: false
-      - id: docformatter
-        name: docformatter
-        entry: poetry run docformatter -r -i --pre-summary-newline --make-summary-multi-line --wrap-summaries 90 --wrap-descriptions 90 src tests
-        language: system
-        types: [python]
-        pass_filenames: false
+
+  # flake8 - linting
+  - repo: https://github.com/pycqa/flake8
+    rev: 4.0.1
+    hooks:
       - id: flake8
         name: flake8
-        entry: poetry run flake8 src tests
-        language: system
-        types: [python]
-        pass_filenames: false
+
+  # mypy - lint-like type checking
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v0.961
+    hooks:
+      - id: mypy
+        name: mypy
+
+  # docformatter - formats docstrings to follow PEP 257
+  - repo: https://github.com/pycqa/docformatter
+    rev: v1.4
+    hooks:
+      - id: docformatter
+        name: docformatter
+        args:
+          [
+            -r,
+            -i,
+            --pre-summary-newline,
+            --make-summary-multi-line,
+            --wrap-summaries,
+            "90",
+            --wrap-descriptions,
+            "90",
+            src,
+            tests,
+          ]
+
+  # bandit - find common security issues
+  - repo: https://github.com/pycqa/bandit
+    rev: 1.7.4
+    hooks:
+      - id: bandit
+        name: bandit
+        exclude: ^tests/
+        args:
+          - -r
+          - src
+
+  - repo: local
+    hooks:
       - id: pytest
         name: pytest
         entry: poetry run pytest --cov=src tests
         language: system
         types: [python]
         pass_filenames: false
-      - id: bandit
-        name: bandit
-        entry: poetry run bandit -r src
-        language: system
-        types: [python]
-        pass_filenames: false
+
+  # prettier - formatting JS, CSS, JSON, Markdown, ...
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: v2.7.1
     hooks:
