@@ -15,7 +15,7 @@ repository = "https://github.com/smarlhens/python-boilerplate"
 myapplication = "myapplication.main:main"
 
 [tool.poetry.dependencies]
-python = "3.10.4"
+python = "^3.10"
 
 [tool.poetry.dev-dependencies]
 pytest = "7.1.2"
