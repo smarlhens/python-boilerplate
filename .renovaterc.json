@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "config:base",
+    "schedule:daily",
+    ":automergeMinor",
+    ":prConcurrentLimitNone",
+    ":prHourlyLimitNone"
+  ],
+  "labels": ["dependencies"]
+}
