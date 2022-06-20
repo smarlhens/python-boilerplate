@@ -1,4 +1,4 @@
-<p style="text-align: center">
+<p align="center">
   <a href="https://python-poetry.org/" target="blank"><img src="https://python-poetry.org/images/logo-origami.svg" height="100" alt="Poetry logo" /></a>
   <a href="https://pre-commit.com/" target="blank"><img src="https://pre-commit.com/logo.svg" height="100" alt="pre-commit logo" /></a>
   <a href="https://pycqa.github.io/isort/" target="blank"><img src="https://pycqa.github.io/isort/art/logo.png" height="100" alt="isort logo" /></a>
@@ -6,7 +6,7 @@
   <a href="https://docs.pytest.org/" target="blank"><img src="https://raw.githubusercontent.com/pytest-dev/pytest/main/doc/en/img/pytest_logo_curves.svg" height="100" alt="pytest logo" /></a>
 </p>
 
-<p style="text-align: center">
+<p align="center">
   <a href="https://docs.docker.com/" target="blank"><img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" height="60" alt="Docker logo" /></a>
   <a href="https://github.com/features/actions" target="blank"><img src="https://avatars.githubusercontent.com/u/44036562" height="60" alt="GitHub Actions logo" /></a>
 </p>
