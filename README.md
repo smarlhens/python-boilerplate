@@ -33,7 +33,7 @@
 
 ## Prerequisites
 
-- [Python](https://www.python.org/downloads/) **>=3.10**
+- [Python](https://www.python.org/downloads/) **>=3.10 <3.11** (_tested with 3.10.5_)
 - [pre-commit](https://pre-commit.com/#install)
 - [docker](https://docs.docker.com/get-docker/) (_optional_)
 
@@ -193,10 +193,16 @@ TOTAL                               7      2    71%
 
 ### Build
 
-To build the docker image using [`Dockerfile`](Dockerfile):
+To build the docker `production` image using [`Dockerfile`](Dockerfile):
 
 ```bash
 docker build . -t my-python-application:latest
+```
+
+To build the docker `development` image using [`Dockerfile`](Dockerfile):
+
+```bash
+docker build . --target development -t my-python-application:dev
 ```
 
 ### Run
@@ -204,7 +210,7 @@ docker build . -t my-python-application:latest
 To run the python app example inside Docker:
 
 ```bash
-docker run -it --rm my-python-application:latest
+docker run -it --rm my-python-application:latest # or :dev for development
 ```
 
 <details>
