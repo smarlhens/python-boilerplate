@@ -13,7 +13,7 @@ repos:
 
   # black - formatting
   - repo: https://github.com/psf/black
-    rev: 22.3.0
+    rev: 22.6.0
     hooks:
       - id: black
         name: black
@@ -30,14 +30,14 @@ repos:
 
   # flake8 - linting
   - repo: https://github.com/pycqa/flake8
-    rev: 4.0.1
+    rev: 5.0.2
     hooks:
       - id: flake8
         name: flake8
 
   # mypy - lint-like type checking
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v0.961
+    rev: v0.971
     hooks:
       - id: mypy
         name: mypy
