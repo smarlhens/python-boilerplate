@@ -13,9 +13,8 @@
 
 # Python boilerplate
 
+[![CodeQL](https://github.com/smarlhens/python-boilerplate/workflows/codeql/badge.svg)](https://github.com/smarlhens/python-boilerplate/actions/workflows/codeql.yml)
 [![GitHub CI](https://github.com/smarlhens/python-boilerplate/workflows/ci/badge.svg)](https://github.com/smarlhens/python-boilerplate/actions/workflows/ci.yml)
-[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/smarlhens/python-boilerplate/main.svg)](https://results.pre-commit.ci/latest/github/smarlhens/python-boilerplate/main)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/smarlhens/python-boilerplate.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/smarlhens/python-boilerplate/alerts/)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/smarlhens/python-boilerplate.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/smarlhens/python-boilerplate/context:javascript)
 [![GitHub license](https://img.shields.io/github/license/smarlhens/python-boilerplate)](https://github.com/smarlhens/python-boilerplate)
 
