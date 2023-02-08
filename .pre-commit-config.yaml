@@ -1,8 +1,8 @@
-ci:
-  skip: [pytest]
-
 default_language_version:
   python: python3.10
+
+ci:
+  skip: [pytest]
 
 repos:
   # general checks (see here: https://pre-commit.com/hooks.html)
