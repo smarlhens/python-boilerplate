@@ -1,4 +1,4 @@
-FROM python:3.11.0-slim-bullseye as python-base
+FROM python:3.10.0-slim-bullseye as python-base
 
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
@@ -16,7 +16,7 @@ RUN apt-get update \
         curl \
         build-essential
 
-ENV POETRY_VERSION=1.1.13
+ENV POETRY_VERSION=1.1.8
 RUN curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
 
 WORKDIR $PYSETUP_PATH
