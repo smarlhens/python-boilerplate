@@ -17,7 +17,7 @@ RUN apt-get update \
         build-essential
 
 ENV POETRY_VERSION=1.1.8
-RUN curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+RUN curl -sSL https://install.python-poetry.org/ | python
 
 WORKDIR $PYSETUP_PATH
 COPY ./poetry.lock ./pyproject.toml ./
