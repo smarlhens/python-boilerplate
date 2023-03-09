@@ -6,5 +6,6 @@
     ":prConcurrentLimitNone",
     ":prHourlyLimitNone"
   ],
-  "labels": ["dependencies"]
+  "labels": ["dependencies"],
+  "ignorePaths": ["Dockerfile", ".python-version"]
 }
