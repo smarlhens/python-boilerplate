@@ -33,7 +33,7 @@ repos:
 
   # mypy - lint-like type checking
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.0.1
+    rev: v1.1.1
     hooks:
       - id: mypy
         name: mypy
@@ -60,7 +60,7 @@ repos:
 
   # bandit - find common security issues
   - repo: https://github.com/pycqa/bandit
-    rev: 1.7.4
+    rev: 1.7.5
     hooks:
       - id: bandit
         name: bandit
