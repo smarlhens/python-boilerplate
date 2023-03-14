@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://python-poetry.org/" target="blank"><img src="https://python-poetry.org/images/logo-origami.svg" height="100" alt="Poetry logo" /></a>
   <a href="https://pre-commit.com/" target="blank"><img src="https://pre-commit.com/logo.svg" height="100" alt="pre-commit logo" /></a>
-  <a href="https://pycqa.github.io/isort/" target="blank"><img src="https://pycqa.github.io/isort/art/logo.png" height="100" alt="isort logo" /></a>
+  <a href="https://github.com/charliermarsh/ruff/" target="blank"><img src="https://raw.githubusercontent.com/charliermarsh/ruff/344daebb1b136a9cf059518c09ef88e7940e2d28/docs/assets/ruff.svg" height="100" alt="ruff logo" style="background-color: #ef5552" /></a>
   <a href="https://bandit.readthedocs.io/" target="blank"><img src="https://raw.githubusercontent.com/pycqa/bandit/main/logo/logo.svg" height="100" alt="bandit logo" /></a>
   <a href="https://docs.pytest.org/" target="blank"><img src="https://raw.githubusercontent.com/pytest-dev/pytest/main/doc/en/img/pytest_logo_curves.svg" height="100" alt="pytest logo" /></a>
 </p>
@@ -87,13 +87,13 @@ hooks are installed
 
 For more configuration options and details, see the [configuration docs](https://pre-commit.com/).
 
-### flake8
+### ruff
 
-[flake8](https://flake8.pycqa.org/) is a tool for style guide enforcement.
+[ruff](https://github.com/charliermarsh/ruff) is an extremely fast Python linter, written in Rust.
 
-Rules are defined in the [`setup.cfg`](setup.cfg).
+Rules are defined in the [`pyproject.toml`](pyproject.toml).
 
-For more configuration options and details, see the [configuration docs](https://flake8.pycqa.org/).
+For more configuration options and details, see the [configuration docs](https://github.com/charliermarsh/ruff#configuration).
 
 ### mypy
 
@@ -103,14 +103,6 @@ dynamic (or "duck") typing and static typing.
 Rules are defined in the [`pyproject.toml`](pyproject.toml).
 
 For more configuration options and details, see the [configuration docs](https://mypy.readthedocs.io/).
-
-### isort
-
-[isort](https://pycqa.github.io/isort/) is tool that sort your imports, so you don't have to.
-
-Rules are defined in the [`pyproject.toml`](pyproject.toml).
-
-For more configuration options and details, see the [configuration docs](https://pycqa.github.io/isort/).
 
 ### black
 
