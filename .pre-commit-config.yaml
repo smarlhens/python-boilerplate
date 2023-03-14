@@ -24,19 +24,12 @@ repos:
           - "--config"
           - "./pyproject.toml"
 
-  # isort - sorting imports
-  - repo: https://github.com/pycqa/isort
-    rev: 5.12.0
+  # ruff - linting
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: "v0.0.255"
     hooks:
-      - id: isort
-        name: isort
-
-  # flake8 - linting
-  - repo: https://github.com/pycqa/flake8
-    rev: 6.0.0
-    hooks:
-      - id: flake8
-        name: flake8
+      - id: ruff
+        name: ruff
 
   # mypy - lint-like type checking
   - repo: https://github.com/pre-commit/mirrors-mypy
