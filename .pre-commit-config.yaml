@@ -16,7 +16,7 @@ repos:
 
   # black - formatting
   - repo: https://github.com/psf/black
-    rev: 23.1.0
+    rev: 23.3.0
     hooks:
       - id: black
         name: black
@@ -26,7 +26,7 @@ repos:
 
   # ruff - linting
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: "v0.0.259"
+    rev: "v0.0.260"
     hooks:
       - id: ruff
         name: ruff
@@ -40,7 +40,7 @@ repos:
 
   # docformatter - formats docstrings to follow PEP 257
   - repo: https://github.com/pycqa/docformatter
-    rev: v1.5.1
+    rev: v1.6.0
     hooks:
       - id: docformatter
         name: docformatter
