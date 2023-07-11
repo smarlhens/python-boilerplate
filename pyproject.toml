@@ -23,7 +23,7 @@ pytest-cov = "3.0.0"
 black = "22.10.0"
 mypy = "0.991"
 bandit = "1.7.4"
-docformatter = "1.7.3"
+docformatter = "1.7.4"
 ruff = "0.0.277"
 
 [build-system]
