@@ -81,7 +81,7 @@ toml = ["tomli"]
 
 [[package]]
 name = "docformatter"
-version = "1.7.3"
+version = "1.7.4"
 description = "Formats docstrings to follow PEP 257"
 category = "dev"
 optional = false
@@ -306,7 +306,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "7a012dfdbfda0953498a252dde9baff3ca7fff78f85e14380b32bc2cdf6d97d5"
+content-hash = "70c7d4877c538e9471db8d3fa64098f7966a5516ac3b41b94d3dc88fd052e714"
 
 [metadata.files]
 bandit = [
@@ -475,8 +475,8 @@ coverage = [
     {file = "coverage-7.2.1.tar.gz", hash = "sha256:c77f2a9093ccf329dd523a9b2b3c854c20d2a3d968b6def3b820272ca6732242"},
 ]
 docformatter = [
-    {file = "docformatter-1.7.3-py3-none-any.whl", hash = "sha256:ba776f6305ff0ae9e1f42178975c0956ce01216e80b9d3e3e43daae9f742e321"},
-    {file = "docformatter-1.7.3.tar.gz", hash = "sha256:f6ce59631d4ecc41af2780787b88f5dab94cdf1383796b1110318040c2f4ea36"},
+    {file = "docformatter-1.7.4-py3-none-any.whl", hash = "sha256:e91f99772562f583723272180deab65940bceec65570a3f2ab72695e80d9d4d0"},
+    {file = "docformatter-1.7.4.tar.gz", hash = "sha256:5e1897e316016debf3fdee3e0515e54faaaef32ef84efbd2fbbb03bf9198238c"},
 ]
 exceptiongroup = [
     {file = "exceptiongroup-1.1.1-py3-none-any.whl", hash = "sha256:232c37c63e4f682982c8b6459f33a8981039e5fb8756b2074364e5055c498c9e"},
