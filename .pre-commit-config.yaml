@@ -16,7 +16,7 @@ repos:
 
   # black - formatting
   - repo: https://github.com/psf/black
-    rev: 23.3.0
+    rev: 23.7.0
     hooks:
       - id: black
         name: black
@@ -25,22 +25,22 @@ repos:
           - "./pyproject.toml"
 
   # ruff - linting
-  - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: "v0.0.260"
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: "v0.0.277"
     hooks:
       - id: ruff
         name: ruff
 
   # mypy - lint-like type checking
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.1.1
+    rev: v1.4.1
     hooks:
       - id: mypy
         name: mypy
 
   # docformatter - formats docstrings to follow PEP 257
   - repo: https://github.com/pycqa/docformatter
-    rev: v1.6.0
+    rev: v1.7.4
     hooks:
       - id: docformatter
         name: docformatter
@@ -80,7 +80,7 @@ repos:
 
   # prettier - formatting JS, CSS, JSON, Markdown, ...
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v3.0.0-alpha.6
+    rev: v3.0.0
     hooks:
       - id: prettier
         exclude: ^poetry.lock
