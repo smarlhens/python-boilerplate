@@ -18,7 +18,7 @@ myapplication = "myapplication.main:main"
 python = "^3.10"
 
 [tool.poetry.dev-dependencies]
-pytest = "7.4.0"
+pytest = "7.4.1"
 pytest-cov = "3.0.0"
 black = "22.10.0"
 mypy = "0.991"
