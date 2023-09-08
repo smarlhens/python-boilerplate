@@ -212,7 +212,7 @@ testing = ["pytest", "pytest-benchmark"]
 
 [[package]]
 name = "pytest"
-version = "7.4.1"
+version = "7.4.2"
 description = "pytest: simple powerful testing with Python"
 category = "dev"
 optional = false
@@ -306,7 +306,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "c3ca7f4fa1b7c253f9f9a757594be4dd13a4cd4acd54236564b471989aa06fda"
+content-hash = "d30a5277f4335e7b68c48fc50f921b6979cd9e6de399c4ba0db482215a12785a"
 
 [metadata.files]
 bandit = [
@@ -551,8 +551,8 @@ pluggy = [
     {file = "pluggy-1.0.0.tar.gz", hash = "sha256:4224373bacce55f955a878bf9cfa763c1e360858e330072059e10bad68531159"},
 ]
 pytest = [
-    {file = "pytest-7.4.1-py3-none-any.whl", hash = "sha256:460c9a59b14e27c602eb5ece2e47bec99dc5fc5f6513cf924a7d03a578991b1f"},
-    {file = "pytest-7.4.1.tar.gz", hash = "sha256:2f2301e797521b23e4d2585a0a3d7b5e50fdddaaf7e7d6773ea26ddb17c213ab"},
+    {file = "pytest-7.4.2-py3-none-any.whl", hash = "sha256:1d881c6124e08ff0a1bb75ba3ec0bfd8b5354a01c194ddd5a0a870a48d99b002"},
+    {file = "pytest-7.4.2.tar.gz", hash = "sha256:a766259cfab564a2ad52cb1aae1b881a75c3eb7e34ca3779697c23ed47c47069"},
 ]
 pytest-cov = [
     {file = "pytest-cov-3.0.0.tar.gz", hash = "sha256:e7f0f5b1617d2210a2cabc266dfe2f4c75a8d32fb89eafb7ad9d06f6d076d470"},
