@@ -16,7 +16,7 @@ repos:
 
   # black - formatting
   - repo: https://github.com/psf/black
-    rev: 23.7.0
+    rev: 23.9.1
     hooks:
       - id: black
         name: black
@@ -26,7 +26,7 @@ repos:
 
   # ruff - linting
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: "v0.0.285"
+    rev: "v0.0.288"
     hooks:
       - id: ruff
         name: ruff
@@ -80,7 +80,7 @@ repos:
 
   # prettier - formatting JS, CSS, JSON, Markdown, ...
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v3.0.2
+    rev: v3.0.3
     hooks:
       - id: prettier
         exclude: ^poetry.lock
