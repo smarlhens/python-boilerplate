@@ -22,7 +22,7 @@ pytest = "7.4.2"
 pytest-cov = "3.0.0"
 black = "22.10.0"
 mypy = "0.991"
-bandit = "1.7.4"
+bandit = "1.7.5"
 docformatter = "1.7.5"
 ruff = "0.0.288"
 
