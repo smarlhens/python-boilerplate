@@ -2,10 +2,10 @@
   "extends": [
     "config:base",
     "schedule:daily",
-    ":automergeMinor",
+    "group:all",
     ":prConcurrentLimitNone",
-    ":prHourlyLimitNone"
+    ":prHourlyLimitNone",
+    ":prImmediately"
   ],
-  "labels": ["dependencies"],
-  "ignorePaths": ["Dockerfile", ".python-version"]
+  "labels": ["dependencies"]
 }
