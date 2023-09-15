@@ -1,4 +1,4 @@
-FROM python:3.10.5-slim-bullseye as python-base
+FROM python:3.11.5-slim-bookworm as python-base
 
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
@@ -16,8 +16,8 @@ RUN apt-get update \
         curl \
         build-essential
 
-ENV POETRY_VERSION=1.1.8
-RUN curl -sSL https://install.python-poetry.org/ | python
+ENV POETRY_VERSION=1.6.1
+RUN curl -sSL https://install.python-poetry.org | python
 
 WORKDIR $PYSETUP_PATH
 COPY ./poetry.lock ./pyproject.toml ./

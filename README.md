@@ -31,8 +31,9 @@
 
 ## Prerequisites
 
-- [Python](https://www.python.org/downloads/) **>=3.10 <3.11** (_tested with 3.10.5_)
+- [Python](https://www.python.org/downloads/) **>=3.11 <3.12** (_tested with 3.11.5_)
 - [pre-commit](https://pre-commit.com/#install)
+- [poetry](https://python-poetry.org/docs/#installation) **>=1.2.2 <1.7** (_tested with 1.6.1_)
 - [docker](https://docs.docker.com/get-docker/) (_optional_)
 
 ---
