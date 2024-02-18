@@ -1,4 +1,4 @@
-FROM python:3.11.5-slim-bookworm as python-base
+FROM python:3.12.2-slim-bookworm as python-base
 
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
@@ -16,7 +16,7 @@ RUN apt-get update \
         curl \
         build-essential
 
-ENV POETRY_VERSION=1.6.1
+ENV POETRY_VERSION=1.7.1
 RUN curl -sSL https://install.python-poetry.org | python
 
 WORKDIR $PYSETUP_PATH

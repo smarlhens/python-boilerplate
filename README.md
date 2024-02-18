@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://python-poetry.org/" target="blank"><img src="https://python-poetry.org/images/logo-origami.svg" height="100" alt="Poetry logo" /></a>
   <a href="https://pre-commit.com/" target="blank"><img src="https://pre-commit.com/logo.svg" height="100" alt="pre-commit logo" /></a>
-  <a href="https://github.com/charliermarsh/ruff/" target="blank"><img src="https://raw.githubusercontent.com/charliermarsh/ruff/344daebb1b136a9cf059518c09ef88e7940e2d28/docs/assets/ruff.svg" height="100" alt="ruff logo" style="background-color: #ef5552" /></a>
+  <a href="https://github.com/astral-sh/ruff" target="blank"><img src="https://raw.githubusercontent.com/astral-sh/ruff/8c20f14e62ddaf7b6d62674f300f5d19cbdc5acb/docs/assets/bolt.svg" height="100" alt="ruff logo" style="background-color: #ef5552" /></a>
   <a href="https://bandit.readthedocs.io/" target="blank"><img src="https://raw.githubusercontent.com/pycqa/bandit/main/logo/logo.svg" height="100" alt="bandit logo" /></a>
   <a href="https://docs.pytest.org/" target="blank"><img src="https://raw.githubusercontent.com/pytest-dev/pytest/main/doc/en/img/pytest_logo_curves.svg" height="100" alt="pytest logo" /></a>
 </p>
@@ -31,9 +31,9 @@
 
 ## Prerequisites
 
-- [Python](https://www.python.org/downloads/) **>=3.11 <3.12** (_tested with 3.11.5_)
+- [Python](https://www.python.org/downloads/) **>=3.12 <3.13** (_tested with 3.12.2_)
 - [pre-commit](https://pre-commit.com/#install)
-- [poetry](https://python-poetry.org/docs/#installation) **>=1.2.2 <1.7** (_tested with 1.6.1_)
+- [poetry](https://python-poetry.org/docs/#installation) **>=1.2.2 <1.8** (_tested with 1.7.1_)
 - [docker](https://docs.docker.com/get-docker/) (_optional_)
 
 ---
