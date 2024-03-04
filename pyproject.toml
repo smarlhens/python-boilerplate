@@ -18,13 +18,13 @@ myapplication = "myapplication.main:main"
 python = "^3.12"
 
 [tool.poetry.dev-dependencies]
-pytest = "8.0.1"
+pytest = "8.0.2"
 pytest-cov = "4.1.0"
 black = "24.2.0"
 mypy = "1.8.0"
 bandit = "1.7.7"
 docformatter = "1.7.5"
-ruff = "0.2.2"
+ruff = "0.3.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
