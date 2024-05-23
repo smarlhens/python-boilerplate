@@ -7,7 +7,7 @@ default_language_version:
 repos:
   # general checks (see here: https://pre-commit.com/hooks.html)
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
+    rev: v4.6.0
     hooks:
       - id: check-yaml
         args: [--allow-multiple-documents]
@@ -16,7 +16,7 @@ repos:
 
   # black - formatting
   - repo: https://github.com/psf/black
-    rev: 24.2.0
+    rev: 24.4.2
     hooks:
       - id: black
         name: black
@@ -26,14 +26,14 @@ repos:
 
   # ruff - linting
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: "v0.3.0"
+    rev: "v0.4.5"
     hooks:
       - id: ruff
         name: ruff
 
   # mypy - lint-like type checking
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.8.0
+    rev: v1.10.0
     hooks:
       - id: mypy
         name: mypy
@@ -60,7 +60,7 @@ repos:
 
   # bandit - find common security issues
   - repo: https://github.com/pycqa/bandit
-    rev: 1.7.7
+    rev: 1.7.8
     hooks:
       - id: bandit
         name: bandit
