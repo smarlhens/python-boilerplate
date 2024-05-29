@@ -31,9 +31,9 @@
 
 ## Prerequisites
 
-- [Python](https://www.python.org/downloads/) **>=3.12 <3.13** (_tested with 3.12.2_)
+- [Python](https://www.python.org/downloads/) **>=3.12 <3.13** (_tested with 3.12.3_)
 - [pre-commit](https://pre-commit.com/#install)
-- [poetry](https://python-poetry.org/docs/#installation) **>=1.2.2 <1.9** (_tested with 1.8.2_)
+- [poetry](https://python-poetry.org/docs/#installation) **>=1.2.2 <1.9** (_tested with 1.8.3_)
 - [docker](https://docs.docker.com/get-docker/) (_optional_)
 
 ---
@@ -104,14 +104,6 @@ dynamic (or "duck") typing and static typing.
 Rules are defined in the [`pyproject.toml`](pyproject.toml).
 
 For more configuration options and details, see the [configuration docs](https://mypy.readthedocs.io/).
-
-### black
-
-[black](https://black.readthedocs.io/) is an uncompromising code formatter.
-
-Rules are defined in the [`pyproject.toml`](pyproject.toml).
-
-For more configuration options and details, see the [configuration docs](https://black.readthedocs.io/).
 
 ### bandit
 
