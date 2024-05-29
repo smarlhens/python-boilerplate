@@ -3,7 +3,7 @@ def hello_world():
 
 
 def main():
-    print(hello_world())
+    print(hello_world())  # noqa: T201 print only used as placeholder :)
 
 
 if __name__ == "__main__":
