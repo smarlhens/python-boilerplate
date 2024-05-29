@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Python boilerplate"
 authors = ["Samuel MARLHENS <samuel.marlhens@gmail.com>"]
 packages = [
-    { include = "*", from = "src"}
+    { include = "*", from = "src" }
 ]
 license = "MIT"
 readme = "README.md"
@@ -20,11 +20,10 @@ python = "^3.12"
 [tool.poetry.dev-dependencies]
 pytest = "8.2.1"
 pytest-cov = "5.0.0"
-black = "24.4.2"
 mypy = "1.10.0"
 bandit = "1.7.8"
 docformatter = "1.7.5"
-ruff = "0.4.5"
+ruff = "0.4.6"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -35,29 +34,60 @@ backend-path = ["src"]
 addopts = "-vvv"
 testpaths = "tests"
 
-[tool.black]
-line_length = 90
-target_version = ['py310']
-
 [tool.ruff]
-exclude = [
-    ".venv",
-    ".git",
+extend-exclude = [
     "__pycache__",
     "build",
     "dist",
-    "venv",
 ]
-ignore = []
+target-version = "py312"
 line-length = 90
-select = [
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+extend-select = [
+    "C4",
+    "D200",
+    "D201",
+    "D204",
+    "D205",
+    "D206",
+    "D210",
+    "D211",
+    "D213",
+    "D300",
+    "D400",
+    "D402",
+    "D403",
+    "D404",
+    "D419",
     "E",
     "F",
-    "W",
+    "G010",
     "I001",
+    "INP001",
+    "N805",
+    "PERF101",
+    "PERF102",
+    "PERF401",
+    "PERF402",
+    "PGH004",
+    "PGH005",
+    "PIE794",
+    "PIE796",
+    "PIE807",
+    "PIE810",
+    "RET502",
+    "RET503",
+    "RET504",
+    "RET505",
+    "RUF015",
+    "RUF100",
+    "S101",
+    "T20",
+    "W",
 ]
-src = ["src", "tests"]
 
 [mypy]
 files = ["src"]
-strict_optional = false
+strict = "true"
