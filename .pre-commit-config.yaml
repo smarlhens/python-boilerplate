@@ -16,7 +16,7 @@ repos:
 
   # ruff - linting + formatting
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: "v0.4.6"
+    rev: "v0.4.9"
     hooks:
       - id: ruff
         name: ruff
@@ -52,7 +52,7 @@ repos:
 
   # bandit - find common security issues
   - repo: https://github.com/pycqa/bandit
-    rev: 1.7.8
+    rev: 1.7.9
     hooks:
       - id: bandit
         name: bandit
