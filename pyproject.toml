@@ -89,5 +89,5 @@ extend-select = [
 ]
 
 [tool.mypy]
-files = ["src"]
+files = ["src", "tests"]
 strict = "true"
