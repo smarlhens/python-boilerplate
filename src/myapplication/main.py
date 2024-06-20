@@ -1,8 +1,8 @@
-def hello_world():
+def hello_world() -> str:
     return "Hello World"
 
 
-def main():
+def main() -> None:
     print(hello_world())  # noqa: T201 print only used as placeholder :)
 
 
