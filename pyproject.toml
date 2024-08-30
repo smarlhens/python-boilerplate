@@ -1,34 +1,31 @@
-[tool.poetry]
+[project]
 name = "python-boilerplate"
 version = "0.1.0"
 description = "Python boilerplate"
-authors = ["Samuel MARLHENS <samuel.marlhens@proton.me>"]
-packages = [
-    { include = "*", from = "src" }
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Samuel MARLHENS", email = "samuel.marlhens@proton.me" },
 ]
-license = "MIT"
-readme = "README.md"
+readme = { file = "README.md", content-type = "text/markdown" }
+
+[project.urls]
 homepage = "https://github.com/smarlhens/python-boilerplate#readme"
 repository = "https://github.com/smarlhens/python-boilerplate"
 
-[tool.poetry.scripts]
-myapplication = "myapplication.main:main"
-
-[tool.poetry.dependencies]
-python = "^3.12"
-
-[tool.poetry.group.dev.dependencies]
-pytest = "8.3.2"
-pytest-cov = "5.0.0"
-mypy = "1.11.1"
-bandit = "1.7.9"
-docformatter = "1.7.5"
-ruff = "0.6.0"
-
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
-backend-path = ["src"]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.3.2",
+    "pytest-cov>=5.0.0",
+    "mypy>=1.11.2",
+    "bandit>=1.7.9",
+    "docformatter>=1.7.5",
+    "ruff>=0.6.2",
+]
 
 [tool.pytest.ini_options]
 addopts = "-vvv"
@@ -85,6 +82,7 @@ extend-select = [
     "RUF100",
     "S101",
     "T20",
+    "UP",
     "W",
 ]
 

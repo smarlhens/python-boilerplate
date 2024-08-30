@@ -1,43 +1,34 @@
-FROM python:3.12.5-slim-bookworm as python-base
+FROM python:3.12.5-slim-bookworm AS python-base
 
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
-    POETRY_HOME="/opt/poetry" \
-    POETRY_VIRTUALENVS_IN_PROJECT=true \
-    POETRY_NO_INTERACTION=1 \
-    PYSETUP_PATH="/opt/pysetup" \
-    VENV_PATH="/opt/pysetup/.venv"
+    WORKDIR_PATH="/opt/python-boilerplate" \
+    VIRTUAL_ENV="/opt/python-boilerplate/.venv"
 
-ENV PATH="$POETRY_HOME/bin:$VENV_PATH/bin:$PATH"
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
-FROM python-base as builder-base
-RUN apt-get update \
-    && apt-get install --no-install-recommends -y \
-        curl \
-        build-essential
+FROM python-base AS builder-base
 
-ENV POETRY_VERSION=1.8.3
-RUN curl -sSL https://install.python-poetry.org | python
+COPY --from=ghcr.io/astral-sh/uv:0.4.0 /uv /bin/uv
 
-WORKDIR $PYSETUP_PATH
-COPY ./poetry.lock ./pyproject.toml ./
-RUN poetry install --no-root --no-dev
-
-FROM builder-base as development
-
-RUN poetry install --no-root
+WORKDIR $WORKDIR_PATH
 
 COPY . .
 
-RUN poetry install
+RUN uv sync --frozen
 
-CMD ["python","-m", "myapplication.main"]
+FROM builder-base AS development
 
-FROM python-base as production
+CMD ["python","-m", "python_boilerplate.main"]
 
-COPY --from=builder-base $VENV_PATH $VENV_PATH
-WORKDIR $PYSETUP_PATH
+FROM python-base AS production
+
+COPY --from=builder-base $VIRTUAL_ENV $VIRTUAL_ENV
+
+WORKDIR $WORKDIR_PATH
+
 COPY ./src/ ./
+
 USER 10000
 
-CMD ["python","-m", "myapplication.main"]
+CMD ["python","-m", "python_boilerplate.main"]
