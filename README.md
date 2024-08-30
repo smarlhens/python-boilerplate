@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://python-poetry.org/" target="blank"><img src="https://python-poetry.org/images/logo-origami.svg" height="100" alt="Poetry logo" /></a>
+  <a href="https://github.com/astral-sh/uv" target="blank"><img src="https://github.com/astral-sh/uv/blob/8674968a17e5f2ee0dda01d17aaf609f162939ca/docs/assets/logo-letter.svg" height="100" alt="uv logo" /></a>
   <a href="https://pre-commit.com/" target="blank"><img src="https://pre-commit.com/logo.svg" height="100" alt="pre-commit logo" /></a>
   <a href="https://github.com/astral-sh/ruff" target="blank"><img src="https://raw.githubusercontent.com/astral-sh/ruff/8c20f14e62ddaf7b6d62674f300f5d19cbdc5acb/docs/assets/bolt.svg" height="100" alt="ruff logo" style="background-color: #ef5552" /></a>
   <a href="https://bandit.readthedocs.io/" target="blank"><img src="https://raw.githubusercontent.com/pycqa/bandit/main/logo/logo.svg" height="100" alt="bandit logo" /></a>
@@ -31,9 +31,9 @@
 
 ## Prerequisites
 
-- [Python](https://www.python.org/downloads/) **>=3.12 <3.13** (_tested with 3.12.5_)
+- [Python](https://www.python.org/downloads/) **>=3.12.3 <3.13** (_tested with 3.12.5_)
 - [pre-commit](https://pre-commit.com/#install)
-- [poetry](https://python-poetry.org/docs/#installation) **>=1.2.2 <1.9** (_tested with 1.8.3_)
+- [uv](https://docs.astral.sh/uv/getting-started/installation/) **>=0.3.3** (_tested with 0.4.0_)
 - [docker](https://docs.docker.com/get-docker/) (_optional_)
 
 ---
@@ -68,16 +68,15 @@
 
 ## What's in the box ?
 
-### Poetry
+### uv
 
-[Poetry](https://python-poetry.org/) is a tool for dependency management and packaging in Python. It allows you to
-declare the libraries your project depends on and it will manage (install/update) them for you.
+[uv](https://github.com/astral-sh/uv) is an extremely fast Python package and project manager, written in Rust.
 
 **pyproject.toml file** ([`pyproject.toml`](pyproject.toml)): orchestrate your project and its dependencies
-**poetry.lock file** ([`poetry.lock`](poetry.lock)): ensure that the package versions are consistent for everyone
+**uv.lock file** ([`uv.lock`](uv.lock)): ensure that the package versions are consistent for everyone
 working on your project
 
-For more configuration options and details, see the [configuration docs](https://python-poetry.org/docs/).
+For more configuration options and details, see the [configuration docs](https://docs.astral.sh/uv/).
 
 ### pre-commit
 
@@ -90,11 +89,11 @@ For more configuration options and details, see the [configuration docs](https:/
 
 ### ruff
 
-[ruff](https://github.com/charliermarsh/ruff) is an extremely fast Python linter, written in Rust.
+[ruff](https://github.com/astral-sh/ruff) is an extremely fast Python linter, written in Rust.
 
 Rules are defined in the [`pyproject.toml`](pyproject.toml).
 
-For more configuration options and details, see the [configuration docs](https://github.com/charliermarsh/ruff#configuration).
+For more configuration options and details, see the [configuration docs](https://github.com/astral-sh/ruff#configuration).
 
 ### mypy
 
@@ -129,7 +128,7 @@ We are using [pytest](https://docs.pytest.org/) & [pytest-cov](https://github.co
 To run tests:
 
 ```bash
-poetry run pytest tests
+uv run pytest tests
 ```
 
 <details>
@@ -147,7 +146,7 @@ tests/test_myapplication.py::test_hello_world PASSED
 To run tests with coverage:
 
 ```bash
-poetry run pytest tests --cov=src
+uv run pytest tests --cov=src
 ```
 
 <details>
