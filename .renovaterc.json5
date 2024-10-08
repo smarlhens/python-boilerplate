@@ -1,0 +1,22 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: [
+    "config:base",
+    "schedule:daily",
+    "group:all",
+    ":prConcurrentLimitNone",
+    ":prHourlyLimitNone",
+    ":prImmediately",
+  ],
+  labels: ["dependencies"],
+  enabledManagers: [
+    "dockerfile",
+    "github-actions",
+    "pre-commit",
+    "pep621",
+    "pyenv",
+  ],
+  "pre-commit": {
+    enabled: true,
+  },
+}
