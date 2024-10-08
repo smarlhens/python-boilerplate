@@ -5,6 +5,9 @@ on:
     branches:
       - "**"
 
+env:
+  UV_VERSION: "0.4.19"
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
@@ -14,12 +17,6 @@ jobs:
     env:
       UV_CACHE_DIR: /tmp/.uv-cache
     runs-on: ubuntu-24.04
-    strategy:
-      matrix:
-        python-version: ["3.12.3", "3.12.x"]
-        uv-version: ["0.3.5", "0.4.0"]
-      fail-fast: false
-
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4
@@ -27,10 +24,9 @@ jobs:
         id: setup-python
         uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python-version }}
-          architecture: x64
+          python-version-file: ".python-version"
       - name: Set up uv
-        run: curl -LsSf https://astral.sh/uv/${{ matrix.uv-version }}/install.sh | sh
+        run: curl -LsSf https://astral.sh/uv/${{ env.UV_VERSION }}/install.sh | sh
       - name: Restore uv cache
         uses: actions/cache@v4
         with:
