@@ -9,7 +9,7 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 FROM python-base AS builder-base
 
-COPY --from=ghcr.io/astral-sh/uv:0.4.19 /uv /bin/uv
+COPY --from=ghcr.io/astral-sh/uv:0.4.27 /uv /bin/uv
 
 WORKDIR $WORKDIR_PATH
 
