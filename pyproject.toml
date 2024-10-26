@@ -17,14 +17,14 @@ repository = "https://github.com/smarlhens/python-boilerplate"
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-[tool.uv]
-dev-dependencies = [
-    "pytest>=8.3.2",
-    "pytest-cov>=5.0.0",
-    "mypy>=1.11.2",
-    "bandit>=1.7.10",
-    "docformatter>=1.7.5",
-    "ruff>=0.6.9",
+[dependency-groups]
+dev = [
+  "pytest>=8.3.3",
+  "pytest-cov>=5.0.0",
+  "mypy>=1.13.0",
+  "bandit>=1.7.10",
+  "docformatter>=1.7.5",
+  "ruff>=0.7.1",
 ]
 
 [tool.pytest.ini_options]
