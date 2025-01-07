@@ -6,7 +6,7 @@ on:
       - "**"
 
 env:
-  UV_VERSION: "0.4.27"
+  UV_VERSION: "0.5.15"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
