@@ -21,10 +21,10 @@ build-backend = "hatchling.build"
 dev = [
   "pytest>=8.3.3",
   "pytest-cov>=5.0.0",
-  "mypy>=1.13.0",
-  "bandit>=1.7.10",
+  "mypy>=1.14.1",
+  "bandit>=1.8.0",
   "docformatter>=1.7.5",
-  "ruff>=0.7.1",
+  "ruff>=0.8.6",
 ]
 
 [tool.pytest.ini_options]
@@ -37,7 +37,7 @@ extend-exclude = [
     "build",
     "dist",
 ]
-target-version = "py312"
+target-version = "py313"
 line-length = 90
 src = ["src", "tests"]
 
