@@ -16,7 +16,7 @@ repos:
 
   # ruff - linting + formatting
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: "v0.8.6"
+    rev: "v0.9.10"
     hooks:
       - id: ruff
         name: ruff
@@ -25,7 +25,7 @@ repos:
 
   # mypy - lint-like type checking
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.14.1
+    rev: v1.15.0
     hooks:
       - id: mypy
         name: mypy
@@ -53,7 +53,7 @@ repos:
 
   # bandit - find common security issues
   - repo: https://github.com/pycqa/bandit
-    rev: 1.8.0
+    rev: 1.8.3
     hooks:
       - id: bandit
         name: bandit
