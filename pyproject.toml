@@ -19,12 +19,12 @@ build-backend = "hatchling.build"
 
 [dependency-groups]
 dev = [
-  "pytest>=8.3.5",
-  "pytest-cov>=6.0.0",
-  "mypy>=1.15.0",
-  "bandit>=1.8.3",
-  "docformatter>=1.7.5",
-  "ruff>=0.9.10",
+  "pytest>=8.4.0",
+  "pytest-cov>=6.2.1",
+  "mypy>=1.16.1",
+  "bandit>=1.8.5",
+  "docformatter>=1.7.7",
+  "ruff>=0.12.0",
 ]
 
 [tool.pytest.ini_options]
@@ -84,6 +84,9 @@ extend-select = [
   "RUF032",
   "RUF033",
   "RUF034",
+  "RUF041",
+  "RUF046",
+  "RUF057",
   "RUF100",
   "S101",
   "T20",
