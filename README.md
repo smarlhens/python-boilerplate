@@ -31,9 +31,9 @@
 
 ## Prerequisites
 
-- [Python](https://www.python.org/downloads/) **>=3.13.0 <3.14.0** (_tested with 3.13.2_)
-- [pre-commit](https://pre-commit.com/#install) **>=3.2.0 <5.0.0** (_tested with 4.0.1_)
-- [uv](https://docs.astral.sh/uv/getting-started/installation/) **>=0.5.29** (_tested with 0.6.5_)
+- [Python](https://www.python.org/downloads/) **>=3.13.0 <3.14.0** (_tested with 3.13.5_)
+- [pre-commit](https://pre-commit.com/#install) **>=3.2.0 <5.0.0** (_tested with 4.2.0_)
+- [uv](https://docs.astral.sh/uv/getting-started/installation/) **>=0.7.13** (_tested with 0.7.13_)
 - [docker](https://docs.docker.com/get-docker/) (_optional_)
 
 ---
@@ -146,7 +146,7 @@ uv run pytest tests
 ```text
 collected 1 item
 
-tests/test_myapplication.py::test_hello_world PASSED
+tests/test_python_boilerplate.py::test_hello_world PASSED
 ```
 
 </details>
@@ -164,15 +164,15 @@ uv run pytest tests --cov=src
 ```text
 collected 1 item
 
-tests/test_myapplication.py::test_hello_world PASSED
+tests/test_python_boilerplate.py::test_hello_world PASSED
 
----------- coverage: platform linux, python 3.10.4-final-0 -----------
-Name                            Stmts   Miss  Cover
----------------------------------------------------
-src/myapplication/__init__.py       1      0   100%
-src/myapplication/main.py           6      2    67%
----------------------------------------------------
-TOTAL                               7      2    71%
+---------- coverage: platform linux, python 3.13.5-final-0 -----------
+Name                                 Stmts   Miss  Cover
+--------------------------------------------------------
+src/python_boilerplate/__init__.py       1      0   100%
+src/python_boilerplate/main.py           6      2    67%
+--------------------------------------------------------
+TOTAL                                    7      2    71%
 ```
 
 </details>
