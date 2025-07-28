@@ -39,6 +39,8 @@ jobs:
         run: uv sync --all-extras --dev --frozen
       - name: Test with pytest
         run: uv run pytest tests --cov=src
+      - name: Build a wheel
+        run: uv build
       - name: Minimize uv cache
         run: uv cache prune --ci
 
