@@ -1,4 +1,4 @@
-FROM python:3.13.5-slim-bookworm AS python-base
+FROM python:3.13.6-slim-bookworm AS python-base
 
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
@@ -9,7 +9,7 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 FROM python-base AS builder-base
 
-COPY --from=ghcr.io/astral-sh/uv:0.8.3 /uv /uvx /bin/
+COPY --from=ghcr.io/astral-sh/uv:0.8.10 /uv /uvx /bin/
 
 WORKDIR $WORKDIR_PATH
 
