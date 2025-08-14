@@ -31,9 +31,9 @@
 
 ## Prerequisites
 
-- [Python](https://www.python.org/downloads/) **>=3.13.0 <3.14.0** (_tested with 3.13.5_)
-- [pre-commit](https://pre-commit.com/#install) **>=3.2.0 <5.0.0** (_tested with 4.2.0_)
-- [uv](https://docs.astral.sh/uv/getting-started/installation/) **>=0.8.3** (_tested with 0.8.3_)
+- [Python](https://www.python.org/downloads/) **>=3.13.0 <3.14.0** (_tested with 3.13.6_)
+- [pre-commit](https://pre-commit.com/#install) **>=3.2.0 <5.0.0** (_tested with 4.3.0_)
+- [uv](https://docs.astral.sh/uv/getting-started/installation/) **>=0.8.6** (_tested with 0.8.10_)
 - [docker](https://docs.docker.com/get-docker/) (_optional_)
 
 ---
@@ -166,7 +166,7 @@ collected 1 item
 
 tests/test_python_boilerplate.py::test_hello_world PASSED
 
----------- coverage: platform linux, python 3.13.5-final-0 -----------
+---------- coverage: platform linux, python 3.13.6-final-0 -----------
 Name                                 Stmts   Miss  Cover
 --------------------------------------------------------
 src/python_boilerplate/__init__.py       1      0   100%
