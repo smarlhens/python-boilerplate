@@ -19,12 +19,12 @@ build-backend = "uv_build"
 
 [dependency-groups]
 dev = [
-  "pytest>=8.4.1",
-  "pytest-cov>=6.2.1",
-  "mypy>=1.17.1",
+  "pytest>=8.4.2",
+  "pytest-cov>=7.0.0",
+  "mypy>=1.18.1",
   "bandit>=1.8.6",
   "docformatter>=1.7.7",
-  "ruff>=0.12.9",
+  "ruff>=0.13.0",
 ]
 
 [tool.pytest.ini_options]
@@ -85,8 +85,10 @@ extend-select = [
   "RUF033",
   "RUF034",
   "RUF041",
+  "RUF043",
   "RUF046",
   "RUF057",
+  "RUF059",
   "RUF100",
   "S101",
   "T20",
