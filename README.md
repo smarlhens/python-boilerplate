@@ -33,7 +33,7 @@
 
 - [Python](https://www.python.org/downloads/) **>=3.13.0 <3.14.0** (_tested with 3.13.7_)
 - [pre-commit](https://pre-commit.com/#install) **>=3.2.0 <5.0.0** (_tested with 4.3.0_)
-- [uv](https://docs.astral.sh/uv/getting-started/installation/) **>=0.8.12** (_tested with 0.8.12_)
+- [uv](https://docs.astral.sh/uv/getting-started/installation/) **>=0.8.12** (_tested with 0.8.17_)
 - [docker](https://docs.docker.com/get-docker/) (_optional_)
 
 ---
