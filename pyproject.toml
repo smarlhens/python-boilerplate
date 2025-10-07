@@ -21,11 +21,14 @@ build-backend = "uv_build"
 dev = [
   "pytest>=8.4.2",
   "pytest-cov>=7.0.0",
-  "mypy>=1.18.1",
+  "mypy>=1.18.2",
   "bandit>=1.8.6",
   "docformatter>=1.7.7",
-  "ruff>=0.13.0",
+  "ruff>=0.13.3",
 ]
+
+[tool.uv]
+required-version = "0.8.24"
 
 [tool.pytest.ini_options]
 addopts = "-vvv"
