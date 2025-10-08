@@ -2,7 +2,7 @@
 name = "python-boilerplate"
 version = "0.1.0"
 description = "Python boilerplate"
-requires-python = ">=3.13"
+requires-python = ">=3.14"
 license = { file = "LICENSE" }
 authors = [
   { name = "Samuel MARLHENS", email = "samuel.marlhens@proton.me" },
@@ -14,21 +14,20 @@ homepage = "https://github.com/smarlhens/python-boilerplate#readme"
 repository = "https://github.com/smarlhens/python-boilerplate"
 
 [build-system]
-requires = ["uv_build>=0.8.12,<0.9.0"]
+requires = ["uv_build>=0.9.0,<0.10.0"]
 build-backend = "uv_build"
 
 [dependency-groups]
 dev = [
-  "pytest>=8.4.2",
+  "pytest>=9.0.1",
   "pytest-cov>=7.0.0",
   "mypy>=1.18.2",
   "bandit>=1.8.6",
-  "docformatter>=1.7.7",
-  "ruff>=0.13.3",
+  "ruff>=0.14.4",
 ]
 
 [tool.uv]
-required-version = "0.8.24"
+required-version = ">=0.9.0"
 
 [tool.pytest.ini_options]
 addopts = "-vvv"
@@ -40,7 +39,7 @@ extend-exclude = [
   "build",
   "dist",
 ]
-target-version = "py313"
+target-version = "py314"
 line-length = 90
 src = ["src", "tests"]
 
@@ -98,6 +97,9 @@ extend-select = [
   "UP",
   "W",
 ]
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
 
 [tool.ruff.lint.per-file-ignores]
 "tests/*.py" = ["S101"]
