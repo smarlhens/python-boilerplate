@@ -2,7 +2,7 @@ ci:
   skip: [pytest]
 
 default_language_version:
-  python: python3.13
+  python: python3.14
 
 repos:
   # general checks (see here: https://pre-commit.com/hooks.html)
@@ -16,7 +16,7 @@ repos:
 
   # ruff - linting + formatting
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.13.3
+    rev: v0.14.4
     hooks:
       - id: ruff
         name: ruff
@@ -29,26 +29,6 @@ repos:
     hooks:
       - id: mypy
         name: mypy
-
-  # docformatter - formats docstrings to follow PEP 257
-  - repo: https://github.com/pycqa/docformatter
-    rev: v1.7.7
-    hooks:
-      - id: docformatter
-        name: docformatter
-        args:
-          [
-            -r,
-            -i,
-            --pre-summary-newline,
-            --make-summary-multi-line,
-            --wrap-summaries,
-            "90",
-            --wrap-descriptions,
-            "90",
-            src,
-            tests,
-          ]
 
   # bandit - find common security issues
   - repo: https://github.com/pycqa/bandit

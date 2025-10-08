@@ -31,9 +31,9 @@
 
 ## Prerequisites
 
-- [Python](https://www.python.org/downloads/) **>=3.13.0 <3.14.0** (_tested with 3.13.7_)
+- [Python](https://www.python.org/downloads/) **>=3.14.0 <3.15.0** (_tested with 3.14.0_)
 - [pre-commit](https://pre-commit.com/#install) **>=3.2.0 <5.0.0** (_tested with 4.3.0_)
-- [uv](https://docs.astral.sh/uv/getting-started/installation/) **>=0.8.12** (_tested with 0.8.24_)
+- [uv](https://docs.astral.sh/uv/getting-started/installation/) **>=0.9.0** (_tested with 0.9.9_)
 - [docker](https://docs.docker.com/get-docker/) (_optional_)
 
 ---
@@ -120,13 +120,6 @@ Rules are defined in the [`pyproject.toml`](pyproject.toml).
 
 For more configuration options and details, see the [configuration docs](https://bandit.readthedocs.io/).
 
-### docformatter
-
-[docformatter](https://github.com/PyCQA/docformatter) is a tool designed to format docstrings to
-follow [PEP 257](https://peps.python.org/pep-0257/).
-
-Options are defined in the [`.pre-commit-config.yaml`](.pre-commit-config.yaml).
-
 ---
 
 ## Testing
@@ -166,7 +159,7 @@ collected 1 item
 
 tests/test_python_boilerplate.py::test_hello_world PASSED
 
----------- coverage: platform linux, python 3.13.7-final-0 -----------
+---------- coverage: platform linux, python 3.14.0-final-0 -----------
 Name                                 Stmts   Miss  Cover
 --------------------------------------------------------
 src/python_boilerplate/__init__.py       1      0   100%
