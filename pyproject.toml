@@ -19,15 +19,15 @@ build-backend = "uv_build"
 
 [dependency-groups]
 dev = [
-  "pytest>=9.0.1",
+  "pytest>=9.0.2",
   "pytest-cov>=7.0.0",
-  "mypy>=1.18.2",
-  "bandit>=1.8.6",
-  "ruff>=0.14.4",
+  "mypy>=1.19.1",
+  "bandit>=1.9.2",
+  "ruff>=0.14.9",
 ]
 
 [tool.uv]
-required-version = ">=0.9.0"
+required-version = ">=0.9.16"
 
 [tool.pytest.ini_options]
 addopts = "-vvv"
