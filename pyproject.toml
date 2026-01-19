@@ -22,8 +22,8 @@ dev = [
   "pytest>=9.0.2",
   "pytest-cov>=7.0.0",
   "mypy>=1.19.1",
-  "bandit>=1.9.2",
-  "ruff>=0.14.9",
+  "bandit>=1.9.3",
+  "ruff>=0.14.13",
 ]
 
 [tool.uv]
