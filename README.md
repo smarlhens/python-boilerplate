@@ -172,6 +172,79 @@ TOTAL                                    7      2    71%
 
 ---
 
+## Validation
+
+To ensure all configurations are working correctly, you can run the following checks:
+
+### Linting and Formatting
+
+**Run ruff lint check:**
+```bash
+uv run ruff check src tests
+```
+
+**Run ruff format check:**
+```bash
+uv run ruff format --check src tests
+```
+
+**Run ruff format (to fix formatting issues):**
+```bash
+uv run ruff format src tests
+```
+
+### Type Checking
+
+**Run mypy type check:**
+```bash
+uv run mypy src tests
+```
+
+### Security Checking
+
+**Run bandit security check:**
+```bash
+uv run bandit -r src
+```
+
+### Testing
+
+**Run pytest:**
+```bash
+uv run pytest tests
+```
+
+**Run pytest with coverage:**
+```bash
+uv run pytest tests --cov=src
+```
+
+### Pre-commit Hooks
+
+**Run all pre-commit hooks:**
+```bash
+pre-commit run --all-files
+```
+
+### Docker
+
+**Build production image:**
+```bash
+docker build . -t my-python-application:latest
+```
+
+**Build development image:**
+```bash
+docker build . --target development -t my-python-application:dev
+```
+
+**Run the application:**
+```bash
+docker run -it --rm my-python-application:latest
+```
+
+---
+
 ## Docker
 
 ### Build

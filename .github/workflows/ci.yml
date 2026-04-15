@@ -4,46 +4,96 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - "**"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
 
 jobs:
-  build:
+  lint-and-test:
     env:
       UV_CACHE_DIR: /tmp/.uv-cache
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout source code
         uses: actions/checkout@v6
+
       - name: Set up python
         id: setup-python
         uses: actions/setup-python@v6
         with:
           python-version-file: ".python-version"
+
       - name: Set up uv
         uses: astral-sh/setup-uv@v7
         with:
           enable-cache: true
           version-file: "pyproject.toml"
+
       - name: Install dependencies
         run: uv sync --all-extras --dev --frozen
-      - name: Test with pytest
+
+      - name: Run ruff lint
+        run: uv run ruff check src tests
+
+      - name: Run ruff format check
+        run: uv run ruff format --check src tests
+
+      - name: Run mypy type check
+        run: uv run mypy src tests
+
+      - name: Run bandit security check
+        run: uv run bandit -r src
+
+      - name: Run pytest with coverage
         run: uv run pytest tests --cov=src
+
+      - name: Minimize uv cache
+        run: uv cache prune --ci
+
+  build:
+    needs: lint-and-test
+    env:
+      UV_CACHE_DIR: /tmp/.uv-cache
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v6
+
+      - name: Set up python
+        id: setup-python
+        uses: actions/setup-python@v6
+        with:
+          python-version-file: ".python-version"
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+          version-file: "pyproject.toml"
+
+      - name: Install dependencies
+        run: uv sync --all-extras --dev --frozen
+
       - name: Build a wheel
         run: uv build
+
       - name: Minimize uv cache
         run: uv cache prune --ci
 
   build-image:
+    needs: lint-and-test
     runs-on: ubuntu-24.04
-
     steps:
       - name: Checkout source code
         uses: actions/checkout@v6
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
+
       - name: Build docker image
         uses: docker/build-push-action@v6
         with:
