@@ -23,7 +23,7 @@ jobs:
         with:
           python-version-file: ".python-version"
       - name: Set up uv
-        uses: astral-sh/setup-uv@v7
+        uses: astral-sh/setup-uv@v8.1.0
         with:
           enable-cache: true
           version-file: "pyproject.toml"
@@ -43,9 +43,9 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v6
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@v4
       - name: Build docker image
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: .
           push: false
