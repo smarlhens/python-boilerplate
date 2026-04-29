@@ -25,6 +25,7 @@
 - [Installation](#installation)
 - [What's in the box ?](#whats-in-the-box-)
 - [Testing](#testing)
+- [Validation](#validation)
 - [Docker](#docker)
 
 ---
@@ -169,6 +170,54 @@ TOTAL                                    7      2    71%
 ```
 
 </details>
+
+---
+
+## Validation
+
+### Lint & format
+
+To run ruff lint check:
+
+```bash
+uv run ruff check src tests
+```
+
+To run ruff format check:
+
+```bash
+uv run ruff format --check src tests
+```
+
+To apply ruff formatting:
+
+```bash
+uv run ruff format src tests
+```
+
+### Type check
+
+To run mypy:
+
+```bash
+uv run mypy
+```
+
+### Security
+
+To run bandit:
+
+```bash
+uv run bandit -r src
+```
+
+### Pre-commit
+
+To run all pre-commit hooks against all files:
+
+```bash
+pre-commit run --all-files
+```
 
 ---
 
