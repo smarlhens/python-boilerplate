@@ -38,6 +38,8 @@ jobs:
         run: uv run ruff format --check src tests
       - name: Run mypy
         run: uv run mypy
+      - name: Run ty
+        run: uv run ty check
       - name: Run bandit
         run: uv run bandit -r src
       - name: Test with pytest

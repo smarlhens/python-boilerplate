@@ -24,6 +24,7 @@ dev = [
   "mypy>=1.20.2",
   "bandit>=1.9.4",
   "ruff>=0.15.12",
+  "ty>=0.0.35",
 ]
 
 [tool.uv]
@@ -115,3 +116,35 @@ convention = "pep257"
 [tool.mypy]
 files = ["src", "tests"]
 strict = "true"
+
+[tool.ty.src]
+include = ["src", "tests"]
+
+[tool.ty.rules]
+# strict profile: every diagnostic ty exposes at "error" severity
+# Each rule whose default severity is "warn" or "ignore" is promoted to "error".
+ambiguous-protocol-member = "error"
+deprecated = "error"
+ignore-comment-unknown-rule = "error"
+ineffective-final = "error"
+invalid-enum-member-annotation = "error"
+invalid-ignore-comment = "error"
+invalid-legacy-positional-parameter = "error"
+invalid-named-tuple-override = "error"
+mismatched-type-name = "error"
+possibly-missing-implicit-call = "error"
+possibly-missing-submodule = "error"
+redundant-cast = "error"
+redundant-final-classvar = "error"
+undefined-reveal = "error"
+unresolved-global = "error"
+unsupported-base = "error"
+unused-awaitable = "error"
+unused-ignore-comment = "error"
+unused-type-ignore-comment = "error"
+useless-overload-body = "error"
+division-by-zero = "error"
+possibly-missing-attribute = "error"
+possibly-missing-import = "error"
+possibly-unresolved-reference = "error"
+unsupported-dynamic-base = "error"

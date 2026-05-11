@@ -113,6 +113,14 @@ Rules are defined in the [`pyproject.toml`](pyproject.toml).
 
 For more configuration options and details, see the [configuration docs](https://mypy.readthedocs.io/).
 
+### ty
+
+[ty](https://github.com/astral-sh/ty) is a fast type checker from Astral, written in Rust. It runs alongside mypy as a second blocking type-checker.
+
+Rules are defined in the [`pyproject.toml`](pyproject.toml).
+
+For more configuration options and details, see the [ty documentation](https://github.com/astral-sh/ty).
+
 ### bandit
 
 [bandit](https://bandit.readthedocs.io/) is a tool designed to find common security issues in Python code.
