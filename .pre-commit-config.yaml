@@ -59,7 +59,7 @@ repos:
 
   # oxfmt - formatting YAML, JSON, Markdown, ...
   - repo: https://github.com/oxc-project/mirrors-oxfmt
-    rev: v0.54.0
+    rev: v0.56.0
     hooks:
       - id: oxfmt
         types_or: [yaml, markdown, json]
