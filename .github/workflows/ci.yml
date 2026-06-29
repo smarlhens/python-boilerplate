@@ -16,7 +16,7 @@ jobs:
   lint-and-test:
     env:
       UV_CACHE_DIR: /tmp/.uv-cache
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
       - name: Checkout source code
         uses: actions/checkout@v7
@@ -51,7 +51,7 @@ jobs:
     needs: lint-and-test
     env:
       UV_CACHE_DIR: /tmp/.uv-cache
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
       - name: Checkout source code
         uses: actions/checkout@v7
@@ -74,7 +74,7 @@ jobs:
 
   build-image:
     needs: lint-and-test
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
 
     steps:
       - name: Checkout source code
