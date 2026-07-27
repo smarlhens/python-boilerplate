@@ -21,10 +21,10 @@ build-backend = "uv_build"
 dev = [
   "pytest>=9.1.1",
   "pytest-cov>=7.1.0",
-  "mypy>=2.1.0",
+  "mypy>=2.3.0",
   "bandit>=1.9.4",
-  "ruff>=0.15.20",
-  "ty>=0.0.55",
+  "ruff>=0.16.0",
+  "ty>=0.0.63",
 ]
 
 [tool.uv]
