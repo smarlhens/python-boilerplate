@@ -16,7 +16,7 @@ repos:
 
   # ruff - linting + formatting
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.20
+    rev: v0.16.0
     hooks:
       - id: ruff
         name: ruff
@@ -25,14 +25,14 @@ repos:
 
   # mypy - lint-like type checking
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v2.1.0
+    rev: v2.3.0
     hooks:
       - id: mypy
         name: mypy
 
   # ty - lint-like type checking (Astral, preview)
   - repo: https://github.com/astral-sh/ty-pre-commit
-    rev: v0.0.55
+    rev: v0.0.63
     hooks:
       - id: ty
         name: ty
@@ -59,7 +59,7 @@ repos:
 
   # oxfmt - formatting YAML, JSON, Markdown, ...
   - repo: https://github.com/oxc-project/mirrors-oxfmt
-    rev: v0.56.0
+    rev: v0.60.0
     hooks:
       - id: oxfmt
         types_or: [yaml, markdown, json]
