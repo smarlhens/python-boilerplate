@@ -2,7 +2,6 @@
   <a href="https://github.com/astral-sh/uv" target="blank"><img src="https://github.com/astral-sh/uv/blob/8674968a17e5f2ee0dda01d17aaf609f162939ca/docs/assets/logo-letter.svg" height="100" alt="uv logo" /></a>
   <a href="https://pre-commit.com/" target="blank"><img src="https://pre-commit.com/logo.svg" height="100" alt="pre-commit logo" /></a>
   <a href="https://github.com/astral-sh/ruff" target="blank"><img src="https://raw.githubusercontent.com/astral-sh/ruff/8c20f14e62ddaf7b6d62674f300f5d19cbdc5acb/docs/assets/bolt.svg" height="100" alt="ruff logo" style="background-color: #ef5552" /></a>
-  <a href="https://bandit.readthedocs.io/" target="blank"><img src="https://raw.githubusercontent.com/pycqa/bandit/main/logo/logo.svg" height="100" alt="bandit logo" /></a>
   <a href="https://docs.pytest.org/" target="blank"><img src="https://raw.githubusercontent.com/pytest-dev/pytest/main/doc/en/img/pytest_logo_curves.svg" height="100" alt="pytest logo" /></a>
 </p>
 
@@ -121,14 +120,6 @@ Rules are defined in the [`pyproject.toml`](pyproject.toml).
 
 For more configuration options and details, see the [ty documentation](https://github.com/astral-sh/ty).
 
-### bandit
-
-[bandit](https://bandit.readthedocs.io/) is a tool designed to find common security issues in Python code.
-
-Rules are defined in the [`pyproject.toml`](pyproject.toml).
-
-For more configuration options and details, see the [configuration docs](https://bandit.readthedocs.io/).
-
 ---
 
 ## Testing
@@ -209,14 +200,6 @@ To run mypy:
 
 ```bash
 uv run mypy
-```
-
-### Security
-
-To run bandit:
-
-```bash
-uv run bandit -r src
 ```
 
 ### Pre-commit

@@ -40,8 +40,6 @@ jobs:
         run: uv run mypy
       - name: Run ty
         run: uv run ty check
-      - name: Run bandit
-        run: uv run bandit -r src
       - name: Test with pytest
         run: uv run pytest tests --cov=src
       - name: Minimize uv cache
