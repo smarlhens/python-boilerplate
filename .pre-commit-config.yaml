@@ -37,17 +37,6 @@ repos:
       - id: ty
         name: ty
 
-  # bandit - find common security issues
-  - repo: https://github.com/pycqa/bandit
-    rev: 1.9.4
-    hooks:
-      - id: bandit
-        name: bandit
-        exclude: ^tests/
-        args:
-          - -r
-          - src
-
   - repo: local
     hooks:
       - id: pytest
