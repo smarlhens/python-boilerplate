@@ -32,7 +32,7 @@ repos:
 
   # ty - lint-like type checking (Astral, preview)
   - repo: https://github.com/astral-sh/ty-pre-commit
-    rev: v0.0.63
+    rev: v0.0.71
     hooks:
       - id: ty
         name: ty
