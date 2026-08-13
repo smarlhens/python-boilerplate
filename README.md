@@ -31,9 +31,9 @@
 
 ## Prerequisites
 
-- [Python](https://www.python.org/downloads/) **>=3.14.0 <3.15.0** (_tested with 3.14.6_)
+- [Python](https://www.python.org/downloads/) **>=3.14.0 <3.15.0** (_tested with 3.14.7_)
 - [pre-commit](https://pre-commit.com/#install) **>=3.2.0 <5.0.0** (_tested with 4.6.2_)
-- [uv](https://docs.astral.sh/uv/getting-started/installation/) **>=0.11.21** (_tested with 0.12.3_)
+- [uv](https://docs.astral.sh/uv/getting-started/installation/) **>=0.12.2** (_tested with 0.12.3_)
 - [docker](https://docs.docker.com/get-docker/) (_optional_)
 
 ---
