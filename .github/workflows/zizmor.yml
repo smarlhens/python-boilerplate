@@ -31,3 +31,5 @@ jobs:
         with:
           inputs: |
             .github/workflows/
+          # fork PRs get a read-only token, so SARIF upload would fail: print findings instead
+          advanced-security: ${{ github.event.pull_request.head.repo.fork != true }}
