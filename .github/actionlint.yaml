@@ -1,0 +1,5 @@
+self-hosted-runner:
+  # ubuntu-26.04 is GitHub-hosted, not self-hosted: actionlint simply does not know the label yet.
+  # Drop this once https://github.com/rhysd/actionlint/pull/683 ships in a release.
+  labels:
+    - ubuntu-26.04

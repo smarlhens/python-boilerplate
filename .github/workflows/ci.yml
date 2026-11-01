@@ -12,14 +12,20 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
 
+permissions: {}
+
 jobs:
   lint-and-test:
     env:
       UV_CACHE_DIR: /tmp/.uv-cache
     runs-on: ubuntu-26.04
+    permissions:
+      contents: read
     steps:
       - name: Checkout source code
         uses: actions/checkout@v7
+        with:
+          persist-credentials: false
       - name: Set up python
         id: setup-python
         uses: actions/setup-python@v7
@@ -50,9 +56,13 @@ jobs:
     env:
       UV_CACHE_DIR: /tmp/.uv-cache
     runs-on: ubuntu-26.04
+    permissions:
+      contents: read
     steps:
       - name: Checkout source code
         uses: actions/checkout@v7
+        with:
+          persist-credentials: false
       - name: Set up python
         id: setup-python
         uses: actions/setup-python@v7
@@ -73,10 +83,14 @@ jobs:
   build-image:
     needs: lint-and-test
     runs-on: ubuntu-26.04
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout source code
         uses: actions/checkout@v7
+        with:
+          persist-credentials: false
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v4
       - name: Build docker image
