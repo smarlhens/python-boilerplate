@@ -15,9 +15,11 @@ WORKDIR $WORKDIR_PATH
 
 COPY . .
 
-RUN uv sync --frozen
+RUN uv sync --frozen --no-dev
 
 FROM builder-base AS development
+
+RUN uv sync --frozen
 
 CMD ["python","-m", "python_boilerplate.main"]
 
