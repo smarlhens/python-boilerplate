@@ -14,7 +14,7 @@ homepage = "https://github.com/smarlhens/python-boilerplate#readme"
 repository = "https://github.com/smarlhens/python-boilerplate"
 
 [build-system]
-requires = ["uv_build>=0.12.2,<0.13.0"]
+requires = ["uv_build>=0.13.6,<0.14.0"]
 build-backend = "uv_build"
 
 [dependency-groups]
@@ -23,11 +23,11 @@ dev = [
   "pytest-cov>=7.1.0",
   "mypy>=2.3.0",
   "ruff>=0.16.3",
-  "ty>=0.0.71",
+  "ty>=0.0.95",
 ]
 
 [tool.uv]
-required-version = ">=0.12.2"
+required-version = ">=0.13.6"
 
 [tool.pytest.ini_options]
 addopts = "-vvv"
@@ -129,6 +129,7 @@ include = ["src", "tests"]
 # Each rule whose default severity is "warn" or "ignore" is promoted to "error".
 ambiguous-protocol-member = "error"
 deprecated = "error"
+experimental-syntax = "error"
 ignore-comment-unknown-rule = "error"
 ineffective-final = "error"
 invalid-enum-member-annotation = "error"
@@ -138,8 +139,13 @@ invalid-named-tuple-override = "error"
 mismatched-type-name = "error"
 possibly-missing-implicit-call = "error"
 possibly-missing-submodule = "error"
+pydantic-discarded-extra-argument = "error"
 redundant-cast = "error"
+redundant-condition = "error"
 redundant-final-classvar = "error"
+subclass-of-dataclass-with-order = "error"
+truthiness-test-of-callable = "error"
+truthiness-test-of-iterable = "error"
 undefined-reveal = "error"
 unresolved-global = "error"
 unsupported-base = "error"
@@ -147,8 +153,20 @@ unused-awaitable = "error"
 unused-ignore-comment = "error"
 unused-type-ignore-comment = "error"
 useless-overload-body = "error"
+blanket-ignore-comment = "error"
+disjoint-cast = "error"
 division-by-zero = "error"
+dynamic-function-decorator-return = "error"
+mismatched-sentinel-name = "error"
+missing-direct-dependency = "error"
+missing-override-decorator = "error"
+missing-type-argument = "error"
 possibly-missing-attribute = "error"
 possibly-missing-import = "error"
 possibly-unresolved-reference = "error"
+redundant-condition-strict = "error"
+truthiness-test-of-none-union = "error"
+unsound-assignment = "error"
+unsound-return-statement = "error"
+unsound-yield = "error"
 unsupported-dynamic-base = "error"
