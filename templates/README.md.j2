@@ -1,0 +1,244 @@
+<p align="center">
+  <a href="https://github.com/astral-sh/uv" target="blank"><img src="https://github.com/astral-sh/uv/blob/8674968a17e5f2ee0dda01d17aaf609f162939ca/docs/assets/logo-letter.svg" height="100" alt="uv logo" /></a>
+  <a href="https://pre-commit.com/" target="blank"><img src="https://pre-commit.com/logo.svg" height="100" alt="pre-commit logo" /></a>
+  <a href="https://github.com/astral-sh/ruff" target="blank"><img src="https://raw.githubusercontent.com/astral-sh/ruff/8c20f14e62ddaf7b6d62674f300f5d19cbdc5acb/docs/assets/bolt.svg" height="100" alt="ruff logo" style="background-color: #ef5552" /></a>
+  <a href="https://github.com/astral-sh/ty" target="blank"><img src="https://raw.githubusercontent.com/astral-sh/ty/fba03297fe52271bf413c3cd1ea896976e57e19e/docs/assets/logo-letter.svg" height="100" alt="ty logo" /></a>
+  <a href="https://docs.pytest.org/" target="blank"><img src="https://raw.githubusercontent.com/pytest-dev/pytest/main/doc/en/img/pytest_logo_curves.svg" height="100" alt="pytest logo" /></a>
+</p>
+
+<p align="center">
+  <a href="https://docs.docker.com/" target="blank"><img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" height="60" alt="Docker logo" /></a>
+  <a href="https://github.com/features/actions" target="blank"><img src="https://avatars.githubusercontent.com/u/44036562" height="60" alt="GitHub Actions logo" /></a>
+</p>
+
+# Python boilerplate
+
+[![CodeQL](https://github.com/smarlhens/python-boilerplate/workflows/codeql/badge.svg)](https://github.com/smarlhens/python-boilerplate/actions/workflows/codeql.yml)
+[![GitHub CI](https://github.com/smarlhens/python-boilerplate/workflows/ci/badge.svg)](https://github.com/smarlhens/python-boilerplate/actions/workflows/ci.yml)
+[![GitHub license](https://img.shields.io/github/license/smarlhens/python-boilerplate)](https://github.com/smarlhens/python-boilerplate)
+
+---
+
+## Table of Contents
+
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [What's in the box ?](#whats-in-the-box-)
+- [Testing](#testing)
+- [Validation](#validation)
+- [Docker](#docker)
+
+---
+
+## Prerequisites
+
+- [Python](https://www.python.org/downloads/) **{{ python_constraint }}** (_tested with {{ python_version }}_)
+- [pre-commit](https://pre-commit.com/#install) **{{ pre_commit_constraint }}** (_tested with {{ pre_commit_version }}_)
+- [uv](https://docs.astral.sh/uv/getting-started/installation/) **{{ uv_constraint }}** (_tested with {{ uv_version }}_)
+- [docker](https://docs.docker.com/get-docker/) (_optional_)
+
+---
+
+## Installation
+
+1. Clone the git repository
+
+   ```bash
+   git clone https://github.com/smarlhens/python-boilerplate.git
+   ```
+
+2. Go into the project directory
+
+   ```bash
+   cd python-boilerplate/
+   ```
+
+3. Checkout working branch
+
+   ```bash
+   git checkout <branch>
+   ```
+
+4. Enable pre-commit hooks
+
+   ```bash
+   pre-commit install
+   ```
+
+5. Configure Python environment
+
+   ```bash
+   uv python install
+   uv venv
+   source .venv/bin/activate
+   ```
+
+---
+
+## What's in the box ?
+
+### uv
+
+[uv](https://github.com/astral-sh/uv) is an extremely fast Python package and project manager, written in Rust.
+
+**pyproject.toml file** ([`pyproject.toml`](pyproject.toml)): orchestrate your project and its dependencies
+**uv.lock file** ([`uv.lock`](uv.lock)): ensure that the package versions are consistent for everyone
+working on your project
+
+For more configuration options and details, see the [configuration docs](https://docs.astral.sh/uv/).
+
+### pre-commit
+
+[pre-commit](https://pre-commit.com/) is a framework for managing and maintaining multi-language pre-commit hooks.
+
+**.pre-commit-config.yaml file** ([`.pre-commit-config.yaml`](.pre-commit-config.yaml)): describes what repositories and
+hooks are installed
+
+For more configuration options and details, see the [configuration docs](https://pre-commit.com/).
+
+### ruff
+
+[ruff](https://github.com/astral-sh/ruff) is an extremely fast Python linter, written in Rust.
+
+Rules are defined in the [`pyproject.toml`](pyproject.toml).
+
+For more configuration options and details, see the [configuration docs](https://github.com/astral-sh/ruff#configuration).
+
+### mypy
+
+[mypy](http://mypy-lang.org/) is an optional static type checker for Python that aims to combine the benefits of
+dynamic (or "duck") typing and static typing.
+
+Rules are defined in the [`pyproject.toml`](pyproject.toml).
+
+For more configuration options and details, see the [configuration docs](https://mypy.readthedocs.io/).
+
+### ty
+
+[ty](https://github.com/astral-sh/ty) is a fast type checker from Astral, written in Rust. It runs alongside mypy as a second blocking type-checker.
+
+Rules are defined in the [`pyproject.toml`](pyproject.toml).
+
+For more configuration options and details, see the [ty documentation](https://github.com/astral-sh/ty).
+
+---
+
+## Testing
+
+We are using [pytest](https://docs.pytest.org/) & [pytest-cov](https://github.com/pytest-dev/pytest-cov) to write tests.
+
+To run tests:
+
+```bash
+uv run pytest tests
+```
+
+<details>
+
+<summary>Output</summary>
+
+```text
+{{ pytest_output }}
+```
+
+</details>
+
+To run tests with coverage:
+
+```bash
+uv run pytest tests --cov=src
+```
+
+<details>
+
+<summary>Output</summary>
+
+```text
+{{ pytest_cov_output }}
+```
+
+</details>
+
+---
+
+## Validation
+
+### Lint & format
+
+To run ruff lint check:
+
+```bash
+uv run ruff check src tests scripts
+```
+
+To run ruff format check:
+
+```bash
+uv run ruff format --check src tests scripts
+```
+
+To apply ruff formatting:
+
+```bash
+uv run ruff format src tests scripts
+```
+
+### Type check
+
+To run mypy:
+
+```bash
+uv run mypy
+```
+
+### Pre-commit
+
+To run all pre-commit hooks against all files:
+
+```bash
+pre-commit run --all-files
+```
+
+---
+
+## Docker
+
+### Build
+
+To build the docker `production` image using [`Dockerfile`](Dockerfile):
+
+```bash
+docker build . -t my-python-application:latest
+```
+
+To build the docker `development` image using [`Dockerfile`](Dockerfile):
+
+```bash
+docker build . --target development -t my-python-application:dev
+```
+
+### Run
+
+To run the python app example inside Docker:
+
+```bash
+docker run -it --rm my-python-application:latest # or :dev for development
+```
+
+<details>
+
+<summary>Output</summary>
+
+```text
+{{ app_output }}
+```
+
+</details>
+
+### Execute command inside container
+
+```bash
+docker run -it --rm my-python-application:latest bash
+```
+
+---
