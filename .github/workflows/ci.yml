@@ -39,15 +39,18 @@ jobs:
       - name: Install dependencies
         run: uv sync --all-extras --dev --frozen
       - name: Run ruff lint
-        run: uv run ruff check src tests
+        run: uv run ruff check src tests scripts
       - name: Run ruff format check
-        run: uv run ruff format --check src tests
+        run: uv run ruff format --check src tests scripts
       - name: Run mypy
         run: uv run mypy
       - name: Run ty
         run: uv run ty check
       - name: Test with pytest
-        run: uv run pytest tests --cov=src
+        shell: bash
+        run: uv run pytest tests --cov=src | tee "$RUNNER_TEMP/pytest-output.txt"
+      - name: Check README drift
+        run: uv run scripts/regen_readme.py --check --pytest-output "$RUNNER_TEMP/pytest-output.txt"
       - name: Minimize uv cache
         run: uv cache prune --ci
 

@@ -32,7 +32,7 @@
 
 ## Prerequisites
 
-- [Python](https://www.python.org/downloads/) **>=3.15.0 <3.16.0** (_tested with 3.15.2_)
+- [Python](https://www.python.org/downloads/) **>=3.15** (_tested with 3.15.2_)
 - [pre-commit](https://pre-commit.com/#install) **>=3.2.0 <5.0.0** (_tested with 4.7.0_)
 - [uv](https://docs.astral.sh/uv/getting-started/installation/) **>=0.13.6** (_tested with 0.13.6_)
 - [docker](https://docs.docker.com/get-docker/) (_optional_)
@@ -160,7 +160,7 @@ collected 1 item
 
 tests/test_python_boilerplate.py::test_hello_world PASSED
 
----------- coverage: platform linux, python 3.14.6-final-0 -----------
+_______________ coverage: platform linux, python 3.15.2-final-0 ________________
 Name                                 Stmts   Miss  Cover
 --------------------------------------------------------
 src/python_boilerplate/__init__.py       1      0   100%
@@ -180,19 +180,19 @@ TOTAL                                    7      2    71%
 To run ruff lint check:
 
 ```bash
-uv run ruff check src tests
+uv run ruff check src tests scripts
 ```
 
 To run ruff format check:
 
 ```bash
-uv run ruff format --check src tests
+uv run ruff format --check src tests scripts
 ```
 
 To apply ruff formatting:
 
 ```bash
-uv run ruff format src tests
+uv run ruff format src tests scripts
 ```
 
 ### Type check
